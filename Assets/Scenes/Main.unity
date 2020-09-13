@@ -1419,7 +1419,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "O aplicativo \"Santinho Digital - Elei\xE7\xF5es 2020\" auxilia os candidatos
-    a esclarecerem suas propostas e projetos de governo aos eleitores, a partir da
+    apresentarem suas propostas e projetos de governo aos eleitores, a partir da
     Realidade Aumentada."
 --- !u!222 &777732163
 CanvasRenderer:
@@ -1463,7 +1463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -618}
+  m_AnchoredPosition: {x: 0, y: -646}
   m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784902874
