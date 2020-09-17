@@ -1,15 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class VideoController : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
+    public GameObject loadingTxt;
 
     void Awake()
     {
         videoPlayer = GetComponentInChildren<VideoPlayer>();
+    }
+
+    private void Update()
+    {
+        if (videoPlayer.isPlaying)
+        {
+            loadingTxt.SetActive(false);
+        }
     }
 
     public void Play()
