@@ -12,11 +12,11 @@ public class ButtonsController : MonoBehaviour
     public GameObject button4;
     public GameObject button5;
 
-    public string urlButton1 = "https://www.instagram.com";
-    public string urlButton2 = "https://www.facebook.com";
-    public string urlButton3 = "https://www.twitter.com";
-    public string urlButton4 = "https://www.youtube.com";
-    public string urlButton5 = "https://www.youtube.com";
+    public string urlButton1 = "";
+    public string urlButton2 = "";
+    public string urlButton3 = "";
+    public string urlButton4 = "";
+    public string urlButton5 = "";
 
     private bool option;
     private bool wait;
@@ -129,6 +129,25 @@ public class ButtonsController : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         wait = false;
+    }
+
+    public void ChangeButtonStatus(int btnPosition)
+    {
+        switch (btnPosition)
+        {
+            case 1:
+                button1.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+                break;
+            case 2:
+                button2.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+                break;
+            case 3:
+                button3.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+                break;
+            case 4:
+                button4.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+                break;
+        }
     }
 
 }

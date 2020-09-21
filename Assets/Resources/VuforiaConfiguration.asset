@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AfRojln/////AAAACANOkpNUFUj7lqVIuKWVoi97Ojj3ke3RQjp+94QA+1pB6QRLoMd5c5Meef2cVoO0ekSbFG3bk/hJ1CRZb94kq+742YUyvohJXlckvnBCGJJTyBzEjOMkPPynX+uC86kX6czvXJyTMZt5sMBfBCkXxrbu7rUomESjdv8vJtEwJQnCDvp6rYtP970tOr8kvxcNMUecdO8U+aqqjEx863MaSWWXIvpl5jZc6bRgwJYv/d5INi/tqyZmNczHSzYVVhx4dH34Hn2OrqFh3lCZxwOQwE67nz6k0q6OzLCKa7CRNuZPMgLVbZk9fS+K+aTBZwYMVnF1NMxszM2G2U0mPn54C2s1jJ1Qvg7t2d/VxBf+R4In
+    vuforiaLicenseKey: AU7fmNH/////AAAACOkGtT5Ij0LYmdAOuNU/VWoXb8ger1Xg4/lo/ID5o7PnklWK2U8aaAZFcwFvybQDmLrw7Z44Ao90mkuMNbSereDHFQijrYtvkhs0pehwwSIwrdHRHgrTQC1fro8jBvPYoPF4CaXdI7cV9oghPWAxk3udoVnhIT9RqXMAX2Evm6vQoObNNK70OIyaYTQK1R63LlqkKfcAYvpA5/N7iZDl+UbMdDcJ5qeVv73FGeQV0d+xprTiOES53N95TiROVA33nz/lb3QxRedfjr4jqZWwh78xxS86JLOS0C3PaIT8u8BvF8Q0SBCCTsJSl2oE1hnwmam9Hjgr717+4utUsn+lyKATfVf8JLn+ZeLPJTRUrVOv
     ufoLicenseKey: QWUwaFZsZi8vLy8vQUFBQUtJNi9saks1MTA4cW5kczNXNzdLa0RzdUNRMllYY0RiRWRxRXltZXpzSTVDSXFTYzlBR29oNWFuWmMzdndWajd1djRXN21ONkZSZHRadXY1ME1EMVpzZFZON1MxUW16V0xCa0NYQittekpUQURZSmVrMHJVaW5tMVpqQWJOK2NGRkRsNWFGUUdKTDdyQkFpR21pZUhJdEQwNEpUU0duZC9VeU8rdWh6ekU1elV1b24wckRVVFY5RjZrdUpKWmhPcWlCdTllc2FuamdwZklrRVlXdS83Ry9keEgxdElwTWtuQVpYSWl1dU9EMFVNV1ErS2pBeWplb2VMeTRQdDJlQjZ2QmtaS3Nkc2hscGtUeWF2VGJ6T3NGR1pTQ0NveS9WR2VpQ1ZISERKTU1uNmlDQlJSL1R5cnZLMGxZSVV5TC9PcmxTMkZlc3FrcSsrQk5KUEd3U2JvZGplTUV2Y0FEZ0xiUEx0L1NPSE92WTE=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
@@ -22,9 +22,8 @@ MonoBehaviour:
     virtualSceneScaleFactor: 1
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
-    version: 9.3.3
-    eulaAcceptedVersions: '{"Values":["8.6","8.3","8.5","9.0","9.1","0.0","9.2","9.3"]}'
-    modelTargetMode: 0
+    version: 9.4.6
+    eulaAcceptedVersions: '{"Values":["8.6","8.3","8.5","9.0","9.1","0.0","9.2","9.3","9.4"]}'
   database:
     disableModelExtraction: 0
   videoBackground:
@@ -38,6 +37,7 @@ MonoBehaviour:
     arcoreRequirement: 0
     autoImportArcore: 0
   playmode:
+    mSequencePath: 
     playModeType: 0
   webcam:
     renderTextureLayer: 30

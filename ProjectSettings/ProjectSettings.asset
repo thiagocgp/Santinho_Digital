@@ -16,7 +16,7 @@ PlayerSettings:
   productName: "Santinho Digital - Elei\xE7\xF5es 2020"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.09411766, g: 0.18431373, b: 0.3647059, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 0.4039216, b: 0.227451, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -40,9 +40,9 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 21dd95e0b4b752a479039c4bfacadc77, type: 3}
-    duration: 2
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: 21300000, guid: 21dd95e0b4b752a479039c4bfacadc77, type: 3}
     duration: 2
   - logo: {fileID: 21300000, guid: 81b5e893cd669dd478fb71e244534dcd, type: 3}
     duration: 3
@@ -127,7 +127,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.2
+  bundleVersion: 1.1.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -171,7 +171,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.starteth.santinhodigital2
+    Android: com.starteth.santinhodigital
     iPhone: com.starteth.santinhodigital
   buildNumber:
     iPhone: 1
@@ -260,7 +260,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 1
+  androidUseCustomKeystore: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -272,7 +272,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1c88eaac95392434ab24e7eddbaa3b48, type: 3}
+      m_Icon: {fileID: 2800000, guid: 807d4a28595f1fd4681953468b13ea9f, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

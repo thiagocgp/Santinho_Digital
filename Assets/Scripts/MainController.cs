@@ -38,26 +38,26 @@ public class MainController : MonoBehaviour
         if (menuAnimShow)
         {
             t += 3.5f * Time.deltaTime;
-            rtMenu.anchoredPosition = new Vector3(Mathf.Lerp(-350f, 350f, t), -370f, 0);            
+            rtMenu.anchoredPosition = new Vector3(Mathf.Lerp(-350f, 350f, t), -445f, 0);            
 
             if (t > 1.0f)
             {
                 menuAnimShow = false;
                 t = 0.0f;
-                rtMenu.anchoredPosition = new Vector3(350f, -370f, 0);
+                rtMenu.anchoredPosition = new Vector3(350f, -445f, 0);
             }
         }
 
         if (menuAnimHide)
         {
             t += 3.5f * Time.deltaTime;
-            rtMenu.anchoredPosition = new Vector3(Mathf.Lerp(350f, -350f, t), -370f, 0);            
+            rtMenu.anchoredPosition = new Vector3(Mathf.Lerp(350f, -350f, t), -445f, 0);            
 
             if (t > 1.0f)
             {
                 menuAnimHide = false;
                 t = 0.0f;
-                rtMenu.anchoredPosition = new Vector3(-350f, -370f, 0);
+                rtMenu.anchoredPosition = new Vector3(-350f, -445f, 0);
             }
         }
     }
@@ -106,12 +106,17 @@ public class MainController : MonoBehaviour
 
     public void OpenUrlImagensRef()
     {
-        Application.OpenURL("https://storage.googleapis.com/santinhos/documentos/exemplos_santinho_digital.pdf");
+        Application.OpenURL("https://storage.googleapis.com/santinhos/documentos/exemplos_santinhos.pdf");
     }
 
     public void OpenPoliticaPrivacidade()
     {
         Application.OpenURL("https://starteth.com.br/privacidade-teth");
+    }
+
+    public void OpenFAQ()
+    {
+        Application.OpenURL("https://storage.googleapis.com/santinhos/documentos/faq.pdf");
     }
 
     public void ShowInfoPanel()
