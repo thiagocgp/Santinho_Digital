@@ -6,42 +6,42 @@ using UnityEngine.Video;
 
 public class VideoController : MonoBehaviour
 {
-    private VideoPlayer videoPlayer;
-    public GameObject loadingTxt;
-
-    void Awake()
-    {
-        videoPlayer = GetComponentInChildren<VideoPlayer>();
-    }
+    //public VideoPlayer videoPlayer;
+    public GameObject loadingGameObject;
+    public MediaPlayerCtrl easyPlayer;
 
     private void Update()
     {
-        if (videoPlayer.isPlaying)
+        /*if (videoPlayer.isPlaying)
         {
-            loadingTxt.SetActive(false);
-        }
+            loadingGameObject.SetActive(false);
+        }*/
     }
 
     public void Play()
     {
-        PauseAudio(false);
-        videoPlayer.Play();
+        //PauseAudio(false);
+        //videoPlayer.Play();
+        easyPlayer.Play();
     }
 
     public void Pause()
-    {        
-        PauseAudio(true);
-        videoPlayer.Pause();        
+    {
+        //PauseAudio(true);
+        //videoPlayer.Pause();
+        easyPlayer.Pause();
     }
 
     private void PauseAudio(bool pause)
     {
-        //for (ushort trackNumber = 0; trackNumber < videoPlayer.audioTrackCount; ++trackNumber)
-        //{
-            if (pause)
-                videoPlayer.GetTargetAudioSource(0).Pause();
-            else
-                videoPlayer.GetTargetAudioSource(0).UnPause();
-        //}
+        /*if (pause)
+            videoPlayer.GetTargetAudioSource(0).Pause();
+        else
+            videoPlayer.GetTargetAudioSource(0).UnPause();*/
+    }
+
+    public void StopLoadingAnim()
+    {
+        loadingGameObject.SetActive(false);
     }
 }

@@ -32,6 +32,10 @@ public class CloudRecoEventHandler : MonoBehaviour
     [Tooltip("Here you can set the ImageTargetBehaviour from the scene that will be used to " +
              "augment new cloud reco search results.")]
     public ImageTargetBehaviour m_ImageTargetBehaviour;
+
+    public Material defaultVideoPlayerMaterial;
+    public MeshRenderer videoPlayerMesh;
+    public GameObject loadingAnim;
     #endregion // PUBLIC_MEMBERS
 
 
@@ -112,33 +116,24 @@ public class CloudRecoEventHandler : MonoBehaviour
             Debug.Log("Pointer: " + cloudRecoResult.TargetSearchResultPtr);
             Debug.Log("TrackingRating: " + cloudRecoResult.TrackingRating);
             Debug.Log("UniqueTargetId: " + cloudRecoResult.UniqueTargetId);
-        }
 
-        //Starteth - Pega o metadata em JSON e adiciona os links na url do player de videos e nos botoes das redes sociais
-        //Starteth - Aletra a cor do icone do botão da rede social caso nao tenha a url da mesma no JSON metadata
-        SantinhoMetadata dados = new SantinhoMetadata();
-        dados = JsonUtility.FromJson<SantinhoMetadata>(cloudRecoResult.MetaData);
-        m_ImageTargetBehaviour.GetComponentInChildren<VideoPlayer>().url = dados.url;
-        m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().urlButton1 = dados.instagram;
-        if (dados.instagram.Equals(""))
-        {
-            m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().ChangeButtonStatus(1);
-        }
-        m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().urlButton2 = dados.facebook;
-        if (dados.facebook.Equals(""))
-        {
-            m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().ChangeButtonStatus(2);
-        }
-        m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().urlButton3 = dados.twitter;
-        if (dados.twitter.Equals(""))
-        {
-            m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().ChangeButtonStatus(3);
-        }
-        m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().urlButton4 = dados.site;
-        if (dados.site.Equals(""))
-        {
-            m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>().ChangeButtonStatus(4);
-        }
+            //Starteth - Pega o metadata em JSON e adiciona os links na url do player de videos e nos botoes das redes sociais
+            //Starteth - Aletra a cor do icone do botão da rede social caso nao tenha a url da mesma no JSON metadata
+            SantinhoMetadata dados = new SantinhoMetadata();
+            dados = JsonUtility.FromJson<SantinhoMetadata>(cloudRecoResult.MetaData);
+            MediaPlayerCtrl easyPlayer = m_ImageTargetBehaviour.GetComponentInChildren<MediaPlayerCtrl>();
+            easyPlayer.UnLoad();
+            easyPlayer.Load(dados.url);
+            videoPlayerMesh.material = defaultVideoPlayerMaterial;
+            loadingAnim.SetActive(true);
+            //m_ImageTargetBehaviour.GetComponentInChildren<VideoPlayer>().url = dados.url;
+            ButtonsController btnCtrl = m_ImageTargetBehaviour.GetComponentInChildren<ButtonsController>();
+            btnCtrl.urlButton1 = dados.instagram;
+            btnCtrl.urlButton2 = dados.facebook;
+            btnCtrl.urlButton3 = dados.twitter;
+            btnCtrl.urlButton4 = dados.site;
+            btnCtrl.ChangeButtonStatus();
+        }        
 
         // Changing CloudRecoBehaviour.CloudRecoEnabled to false will call TargetFinder.Stop()
         // and also call all registered ICloudRecoEventHandler.OnStateChanged() with false.

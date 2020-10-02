@@ -27,10 +27,13 @@ public class ButtonsController : MonoBehaviour
         option = false;
         wait = false;
         mesh = gameObject.GetComponent<MeshRenderer>();
+        ChangeButtonStatus();
     }
+
     void Update()
     {
         checkButtonUrlClicked();
+        ChangeButtonStatus();
     }
 
     private void checkButtonUrlClicked()
@@ -131,22 +134,42 @@ public class ButtonsController : MonoBehaviour
         wait = false;
     }
 
-    public void ChangeButtonStatus(int btnPosition)
+    public void ChangeButtonStatus()
     {
-        switch (btnPosition)
+        if (urlButton1 == "")
         {
-            case 1:
-                button1.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
-                break;
-            case 2:
-                button2.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
-                break;
-            case 3:
-                button3.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
-                break;
-            case 4:
-                button4.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
-                break;
+            button1.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+        }
+        else
+        {
+            button1.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 1));
+        }
+
+        if (urlButton2 == "")
+        {
+            button2.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+        }
+        else
+        {
+            button2.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 1));
+        }
+
+        if (urlButton3 == "")
+        {
+            button3.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+        }
+        else
+        {
+            button3.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 1));
+        }
+
+        if (urlButton4 == "")
+        {
+            button4.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 0.15f));
+        }
+        else
+        {
+            button4.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(1, 1, 1, 1));
         }
     }
 
